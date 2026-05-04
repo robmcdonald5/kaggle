@@ -1,0 +1,73 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- Large ML artifacts (gitignored across all competitions) ---
+**/data/
+**/models/
+**/checkpoints/
+**/lightning_logs/
+**/mlruns/
+**/wandb/
+**/outputs/
+**/.cache/
+
+# Common big-data files anywhere in the tree
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.npz
+*.npy
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.safetensors
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# --- Secrets / env ---
+.env
+.env.*
+!.env.example
+kaggle.json
+
+# --- uv / python version pins ---
+.python-version
+uv.lock.local
+
+# --- Allowlist (re-include things the broad ignores would block) ---
+!**/submissions/*.csv
+
+# CLAUDE
+.claude/*
+CLAUDE.md
