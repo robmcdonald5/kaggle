@@ -30,6 +30,10 @@ dependencies = [
 
     # Kaggle CLI for downloading datasets / submitting
     "kaggle>=1.6",
+
+    # Cloud storage (Cloudflare R2 via S3-compatible API).
+    "s3fs>=2024.10",
+    "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]

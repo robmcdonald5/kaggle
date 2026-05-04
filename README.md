@@ -54,7 +54,18 @@ mkdir $env:USERPROFILE\.kaggle
 move $HOME\Downloads\kaggle.json $env:USERPROFILE\.kaggle\
 ```
 
-### 3. Start a new competition
+### 3. (Optional) Configure cloud storage
+
+If you want to read/write data from Cloudflare R2 instead of (or alongside) local disk -- handy for pulling preprocessed datasets across machines without copying them around:
+
+```powershell
+Copy-Item .env.example .env
+# fill in R2 credentials in .env (see docs/storage.md for token setup)
+```
+
+The `shared.storage` module then gives you `r2_uri(...)`, `storage_options()`, and helpers that drop into pandas / Polars / DuckDB / fsspec. See [docs/storage.md](docs/storage.md) for the full walkthrough.
+
+### 4. Start a new competition
 
 ```powershell
 .\scripts\new-competition.ps1 -Slug titanic -Download
